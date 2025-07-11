@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^5.82.0",
+    "@wayflyer/blackbox-fe": "*",
     "@wayflyer/flyui": "*",
     "@wayflyer/flyui-icons": "*",
     "axios": "^1.10.0",

@@ -32,6 +32,19 @@ function BaseApp() {
           updateContainerDims: ({ height }: { height: number }) => {
             hostContainer.style.height = `${height}px`;
           },
+          toggleFullScreen: () => {
+            if (iframe.style.position === "fixed") {
+              iframe.style.position = "";
+              iframe.style.zIndex = "";
+              iframe.style.top = "";
+              iframe.style.left = "";
+            } else {
+              iframe.style.position = "fixed";
+              iframe.style.zIndex = "300";
+              iframe.style.top = "0";
+              iframe.style.left = "0";
+            }
+          },
         },
       });
 

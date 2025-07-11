@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
     -update the iframe title with the step number
   */
   window.addEventListener("hashchange", () => {
-    console.log("hashchange");
     const currentStep = window.location.hash.split("#")[1];
     const title = document.querySelector("h1");
     title.textContent = `Step ${currentStep}`;

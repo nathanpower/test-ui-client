@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   resizeObserver.observe(document.body);
 
   const nextButton = document.getElementById("next-button");
+  const fullScreenButton = document.getElementById("full-screen-button");
 
   /*
     Push an entry onto history
@@ -30,6 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentStep = window.location.hash.split("#")[1];
     const nextStep = currentStep ? parseInt(currentStep) + 1 : 1;
     window.location.hash = `#${nextStep}`;
+  });
+
+  fullScreenButton?.addEventListener("click", async () => {
+    const remote = await connection.promise;
+    remote.toggleFullScreen();
   });
 
   /*

@@ -10,6 +10,7 @@ body {
   height: 1600px;
   padding: 24px;
   box-sizing: border-box;
+  background-color: #f0f0f0;
 }
 
 .iframe-content {
@@ -17,4 +18,11 @@ body {
   background-color: lightgray;
   padding: 24px;
   height: 100%;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 200px;
 }
